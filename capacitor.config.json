@@ -1,0 +1,20 @@
+{
+  "appId": "com.arciguardia.online",
+  "appName": "ArciGuardia",
+  "webDir": "www",
+  "server": {
+    "url": "https://www.arciguardia.online",
+    "cleartext": false
+  },
+  "plugins": {
+    "StatusBar": {
+      "overlaysWebView": false,
+      "style": "LIGHT",
+      "backgroundColor": "#008c45"
+    },
+    "Android": {
+      "adjustMarginsForEdgeToEdge": "always"
+    }
+  },
+  "javascriptPath": "app.js"
+}
