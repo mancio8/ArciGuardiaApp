@@ -73,6 +73,7 @@ npx cap add android
 ## 5️⃣ Copiare il build web
 ```bash
 npx cap copy android
+npx cap sync
 ```
 
 ---
@@ -91,7 +92,7 @@ android/app/build/outputs/apk/release/app-release-unsigned.apk
 
 ## 7️⃣ Generare Keystore
 ```bash
-keytool -genkey -v -keystore ~/arciguardia_app/android/my-release-key.jks \
+keytool -genkey -v -keystore ~/ArciGuardiaApp/android/my-release-key.jks \
   -keyalg RSA -keysize 2048 -validity 10000 -alias my-key-alias
 ```
 
@@ -102,16 +103,16 @@ keytool -genkey -v -keystore ~/arciguardia_app/android/my-release-key.jks \
 BUILD_TOOLS=$(ls ~/Android/Sdk/build-tools/ | sort -V | tail -n 1)
 
 ~/Android/Sdk/build-tools/$BUILD_TOOLS/apksigner sign \
-  --ks ~/arciguardia_app/android/my-release-key.jks \
-  --ks-key-alias my-key-alias \
+  --ks ~/ArciGuardiaApp/android/my-release-key.jks \
+  --ks-key-alias my-key-Arci \
   --v1-signing-enabled true \
   --v2-signing-enabled true \
-  ~/arciguardia_app/android/app/build/outputs/apk/release/app-release-unsigned.apk
+  ~/ArciGuardiaApp/android/app/build/outputs/apk/release/app-release-unsigned.apk
 ```
 Rinomina l'APK finale:
 ```bash
-mv ~/arciguardia_app/android/app/build/outputs/apk/release/app-release-unsigned.apk \
-   ~/arciguardia_app/android/app/build/outputs/apk/release/app-release.apk
+mv ~/ArciGuardiaApp/android/app/build/outputs/apk/release/app-release-unsigned.apk \
+   ~/ArciGuardiaApp/android/app/build/outputs/apk/release/app-release.apk
 ```
 
 ---
@@ -119,7 +120,7 @@ mv ~/arciguardia_app/android/app/build/outputs/apk/release/app-release-unsigned.
 ## 9️⃣ Verifica APK
 ```bash
 ~/Android/Sdk/build-tools/$BUILD_TOOLS/apksigner verify \
-~/arciguardia_app/android/app/build/outputs/apk/release/app-release.apk
+~/ArciGuardiaApp/android/app/build/outputs/apk/release/app-release.apk
 ```
 > I warning sui file META-INF sono normali e non bloccano l'installazione.
 
