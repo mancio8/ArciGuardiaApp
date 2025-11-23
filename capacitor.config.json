@@ -3,7 +3,7 @@
   "appName": "ArciGuardia",
   "webDir": "www",
   "server": {
-    "url": "https://www.arciguardia.online",
+    "url": "https://arciguardia.online",
     "cleartext": false
   },
   "plugins": {

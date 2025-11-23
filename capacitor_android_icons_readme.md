@@ -29,7 +29,7 @@ Assicurati che sia così:
   "appName": "arciguardia",
   "webDir": "www",
   "server": {
-    "url": "https://www.arciguardia.online",
+    "url": "https://arciguardia.online",
     "cleartext": false
   },
   "plugins": {
