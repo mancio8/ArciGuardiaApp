@@ -16,5 +16,9 @@
       "adjustMarginsForEdgeToEdge": "always"
     }
   },
-  "javascriptPath": "app.js"
+  "javascriptPath": "app.js",
+  "cordova": {},
+  "android": {
+    "scheme": "arciguardia"
+  }
 }
